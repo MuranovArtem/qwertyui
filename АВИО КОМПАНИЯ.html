@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EMIRATES</title>
+</head>
+<body background='самолет111.jpg' width="100%" marginheight="60%">
+        <style>
+
+           body {
+                background: url('самолет111.jpg');
+                background-size: cover;
+                background-repeat: no-repeat;
+
+
+
+
+
+                }
+           img{
+                width:100%}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    8
+           .main {
+                background-color:white;
+                margin:auto ;
+                margin-top:30px;
+                width:980px;
+                padding:20px;
+                border:2px black solid;
+                border-radius:15px;
+
+                border: 10px solid rgba(80, 55, 80, 0.5);
+                background: url('img/primer-fona.jpg');
+                width: 130px;
+                height: 116px;}
+           input{
+                width:35%;
+                margin:10px;
+                padding:15px 10px;
+                fond-size:12px;
+                border-radius:15px;
+                background-color:pink
+
+
+
+
+
+                }
+
+
+
+
+           .trff{
+
+                background-color:pink;
+                border:1 px solid;
+                padding:11px;
+                margin-left: auto;
+                margin-right: auto;
+                width:30%;
+
+
+
+               border: 10px solid rgba(80, 55, 80, 0.5);
+               border-radius:25px;
+
+
+
+            }
+           .center{
+                margin-top:30px;
+                text-align:center;
+                }
+           button {
+
+            padding: 11px 20px;
+            border-radius: 1px;
+            text-decoration: none;
+            background-color:pink;
+            color: white;
+           }
+
+           button:hover {
+                background-color: orange
+           }
+         #form {
+
+            display: none;
+            text-align: center;
+
+         }
+         #tr {
+
+            display: none;
+            tr-align: center;
+
+         }
+
+
+
+
+
+        </style>
+
+
+        <div class="trff">
+            <p class="center">Emirates</p>
+        </div>
+        <div class="center">
+                <button    id="buy">купить билет  </button>
+
+
+        </div>
+
+        <div >
+        <form id="form">
+            <input type="text" placeholder="Ваше имя">
+            <input type="text" placeholder="Ваш номер телефона">
+            <button    id="zd">оформить заказ  </button>
+        </form>
+        </div>
+
+
+
+
+        <div>
+            <p type="tr">спасибо за заказ</p>
+        </div>
+
+
+
+
+        <script>
+
+
+            let buy = document.getElementById('buy');
+            buy.addEventListener('click', ()=> {
+                    document.getElementById('buy').style.display = 'none';
+                    document.getElementById('form').style.display = 'block';
+
+            });
+            let zd = document.getElementById('zd');
+            zd.addEventListener('click', ()=> {
+                    document.getElementById('zd').style.display = 'none';
+                    document.getElementById('tr').style.display = block;
+            });
+
+
+
+
+
+        </script>
+
+
+
+</body>
+</html>
