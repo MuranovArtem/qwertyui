@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>EMIRATES</title>
 </head>
-<body background='самолет111.jpg' width="100%" marginheight="60%">
+<body background='самолет111.jpg' width="1%" marginheight="1%">
         <style>
 
            body {
@@ -18,7 +18,7 @@
 
                 }
            img{
-                width:100%}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    8
+                width:1%}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    8
            .main {
                 background-color:white;
                 margin:auto ;
@@ -122,15 +122,13 @@
 
 
 
-        <div>
-            <p type="tr">спасибо за заказ</p>
-        </div>
 
 
 
-
+        <script src="https://telegram.org/js/telegram-web-app.js?59"></script>
         <script>
-
+            let tg = window.Telegram.WebApp;
+             tg.expand();
 
             let buy = document.getElementById('buy');
             buy.addEventListener('click', ()=> {
@@ -138,13 +136,19 @@
                     document.getElementById('form').style.display = 'block';
 
             });
-            let zd = document.getElementById('zd');
-            zd.addEventListener('click', ()=> {
-                    document.getElementById('zd').style.display = 'none';
-                    document.getElementById('tr').style.display = block;
+            let order = document.getElementById('order');
+            order.addEventListener('click', ()=> {
+                    let name = document.getElementById('user_name').value;
+                    let number = document.getElementById('user_number').value;
+
             });
 
+            let data = {name: name,
+                        number: number}
 
+            tg.sendData(JSON.stringify(data));
+
+            tg.close();
 
 
 
