@@ -128,27 +128,31 @@
         <script src="https://telegram.org/js/telegram-web-app.js?59"></script>
         <script>
             let tg = window.Telegram.WebApp;
-             tg.expand();
-
+            let order = document.getElementById('order');
             let buy = document.getElementById('buy');
+
+            tg.expand();
+
+
             buy.addEventListener('click', ()=> {
                     document.getElementById('buy').style.display = 'none';
                     document.getElementById('form').style.display = 'block';
 
             });
-            let order = document.getElementById('order');
+
             order.addEventListener('click', ()=> {
                     let name = document.getElementById('user_name').value;
                     let number = document.getElementById('user_number').value;
 
-            });
-
-            let data = {name: name,
+                    let data = {name: name,
                         number: number}
 
-            tg.sendData(JSON.stringify(data));
+                    tg.sendData(JSON.stringify(data));
 
-            tg.close();
+                    tg.close();
+            });
+
+
 
 
 
