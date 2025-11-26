@@ -127,6 +127,7 @@
 
         <script src="https://telegram.org/js/telegram-web-app.js?59"></script>
         <script>
+            document.getElementById('error').innerText='';
             let tg = window.Telegram.WebApp;
             let order = document.getElementById('order');
             let buy = document.getElementById('buy');
@@ -144,8 +145,16 @@
                     let name = document.getElementById('user_name').value;
                     let number = document.getElementById('user_number').value;
 
-                    let data = {name: name,
-                        number: number}
+                    if(name.lenght < 2) {
+                        document.getElementById('error').inerText = 'ошибка имени'
+                        return;
+                    }
+
+
+                    let data = {
+                        name: name,
+                        number: number
+                      }
 
                     tg.sendData(JSON.stringify(data));
 
