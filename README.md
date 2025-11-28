@@ -145,8 +145,12 @@
                     let name = document.getElementById('user_name').value;
                     let number = document.getElementById('user_number').value;
 
-                    if(name.lenght < 2) {
+                    if(name.length < 2) {
                         document.getElementById('error').inerText = 'ошибка имени'
+                        return;
+                    }
+                    if(number.length < 9) {
+                        document.getElementById('error').inerText = 'ошибка номера'
                         return;
                     }
 
