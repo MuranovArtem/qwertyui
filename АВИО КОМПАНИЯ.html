@@ -147,11 +147,11 @@
                     let number = document.getElementById('user_number').value;
 
                     if(name.length < 2) {
-                        document.getElementById('error').innerText = 'ошибка имени'
+                        document.getElementById('error').innerText = 'ошибка имени';
                         return;
                     }
                     if(number.length < 9) {
-                        document.getElementById('error').innerText = 'ошибка номера'
+                        document.getElementById('error').innerText = 'ошибка номера';
                         return;
                     }
 
@@ -159,7 +159,7 @@
                     let data = {
                         name: name,
                         number: number
-                      }
+                    }
 
                     tg.sendData(JSON.stringify(data));
 
