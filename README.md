@@ -119,12 +119,6 @@
         </form>
         </div>
 
-
-
-
-
-
-
         <script src="https://telegram.org/js/telegram-web-app.js?59"></script>
         <script>
 
@@ -142,30 +136,19 @@
             });
 
             order.addEventListener('click', ()=> {
-                    document.getElementById('error').innerText='';
-                    let name = document.getElementById('user_name').value;
-                    let number = document.getElementById('user_number').value;
+                document.getElementById('error').innerText='';
+                let name = document.getElementById('user_name').value;
+                let number = document.getElementById('user_number').value;
 
+                 let data = {
+                    name: name,
+                    number: number
+                 }
 
+                 tg.sendData(JSON.stringify(data));
 
-
-                    let data = {
-                        name: name,
-                        number: number
-                    }
-
-                    tg.sendData(JSON.stringify(data));
-
-                    tg.close();
+                 tg.close();
             });
-
-
-
-
-
         </script>
-
-
-
 </body>
 </html>
