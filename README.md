@@ -146,14 +146,7 @@
                     let name = document.getElementById('user_name').value;
                     let number = document.getElementById('user_number').value;
 
-                    if(name.length < 2) {
-                        document.getElementById('error').innerText = 'ошибка имени';
-                        return;
-                    }
-                    if(number.length < 9) {
-                        document.getElementById('error').innerText = 'ошибка номера';
-                        return;
-                    }
+
 
 
                     let data = {
@@ -171,7 +164,8 @@
 
 
         </script>
-
+</body>
+</html>
 
 
 </body>
