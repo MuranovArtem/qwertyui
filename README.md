@@ -105,7 +105,7 @@
         <div id = "main">
             <h1>AVIA</h1>
             <button id = "buy">купить</button>
-                
+
         </div>
 
         <div >
@@ -122,24 +122,26 @@
             let buy = document.getElementById('buy');
             let order = document.getElementById('order');
             tg.expand();
-            
+
             buy.addEventListener("click", ()=> {
                 document.getElementById('main').style.display= "none";
                 document.getElementById('order').style.display= "block";
-            
+
             });
-            
+
             order.addEventListener("click", ()=> {
                 let name = document.getElementById('user_name').value;
                 let number = document.getElementById('user_phone').value;
-            
 
-                let data = {name: name, number:number} 
-                
+
+                let data = {name: name, number:number}
+
                 tg.SendData(JSON.stringify(data));
-                
+
                 tg.close();
-           
+            
+            });
+
         </script>
 </body>
 </html>
