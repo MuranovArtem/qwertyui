@@ -125,7 +125,7 @@
 
             buy.addEventListener("click", ()=> {
                 document.getElementById('main').style.display= "none";
-                document.getElementById('order').style.display= "block";
+                document.getElementById('form').style.display= "block";
 
             });
 
@@ -139,7 +139,7 @@
                 tg.SendData(JSON.stringify(data));
 
                 tg.close();
-            
+
             });
 
         </script>
