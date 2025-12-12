@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>EMIRATES</title>
-    
+
     <style>
 
            body {
@@ -97,7 +97,7 @@
     </style>
 </head>
 <body background='самолет111.jpg' marginheight="1%">
-    
+
 
 
         <div id = "main">
@@ -128,13 +128,7 @@
             });
 
             order.addEventListener("click", ()=> {
-                let name = document.getElementById('user_name').value;
-                let phone = document.getElementById('user_phone').value;
-
-
-                let data = {name: name, phone: phone}
-
-                tg.SendData(JSON.stringify(data));
+              
 
                 tg.close();
 
