@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>EMIRATES</title>
-</head>
-<body background='самолет111.jpg' width="1%" marginheight="1%">
-        <style>
+    
+    <style>
 
            body {
                 background: url('самолет111.jpg');
@@ -82,24 +81,23 @@
            button:hover {
                 background-color: orange
            }
-         #form {
+            #form {
 
-            display: none;
-            text-align: center;
+                display: none;
+                 text-align: center;
 
-         }
-         #tr {
+            }
+             #tr {
 
-            display: none;
-            tr-align: center;
+                    display: none;
+                 tr-align: center;
 
-         }
+            }
 
-
-
-
-
-        </style>
+    </style>
+</head>
+<body background='самолет111.jpg' marginheight="1%">
+    
 
 
         <div id = "main">
@@ -131,10 +129,10 @@
 
             order.addEventListener("click", ()=> {
                 let name = document.getElementById('user_name').value;
-                let number = document.getElementById('user_phone').value;
+                let phone = document.getElementById('user_phone').value;
 
 
-                let data = {name: name, number:number}
+                let data = {name: name, phone: phone}
 
                 tg.SendData(JSON.stringify(data));
 
