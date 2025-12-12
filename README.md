@@ -124,7 +124,7 @@
 
             });
 
-Максим Программирование, [12.12.2025 17:40]
+
 order.addEventListener("click", ()=> {
                 let name = document.getElementById('user_name').value;
                 let phone = document.getElementById('user_phone').value;
