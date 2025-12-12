@@ -98,20 +98,17 @@
 </head>
 <body background='самолет111.jpg' marginheight="1%">
 
-
-
         <div id = "main">
             <h1>AVIA</h1>
             <button id = "buy">купить</button>
-
         </div>
 
         <div >
-        <form id="form">
-            <input type="text" placeholder="Ваше имя" id = 'user_name'>
-            <input type="text" placeholder="Ваш номер телефона" id = 'user_phone'>
-            <button    id="zd">оформить заказ  </button>
-        </form>
+            <form id="form">
+                <input type="text" placeholder="Ваше имя" id = 'user_name'>
+                <input type="text" placeholder="Ваш номер телефона" id = 'user_phone'>
+                <button id="zd">оформить заказ  </button>
+            </form>
         </div>
 
         <script src="https://telegram.org/js/telegram-web-app.js?59"></script>
@@ -127,9 +124,17 @@
 
             });
 
-            order.addEventListener("click", ()=> {
-              
+Максим Программирование, [12.12.2025 17:40]
+order.addEventListener("click", ()=> {
+                let name = document.getElementById('user_name').value;
+                let phone = document.getElementById('user_phone').value;
 
+                let data {name: name,
+                    phone: phone
+                    
+                }
+                tg.sendData(JSON.stringify(data))
+                
                 tg.close();
 
             });
