@@ -125,16 +125,16 @@
             });
 
 
-order.addEventListener("click", ()=> {
+            order.addEventListener("click", ()=> {
                 let name = document.getElementById('user_name').value;
                 let phone = document.getElementById('user_phone').value;
 
                 let data {name: name,
                     phone: phone
-                    
+
                 }
                 tg.sendData(JSON.stringify(data))
-                
+
                 tg.close();
 
             });
