@@ -123,11 +123,11 @@
             });
             order.addEventListener('click', ()=> {
                 tg.close();
-            }
+            });
 
 
 
-          
+
 
         </script>
 </body>
