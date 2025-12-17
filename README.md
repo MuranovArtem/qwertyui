@@ -103,13 +103,11 @@
             <button id = "buy">купить</button>
         </div>
 
-        <div >
-            <form id="form">
-                <input type="text" placeholder="Ваше имя" id = 'user_name'>
-                <input type="text" placeholder="Ваш номер телефона" id = 'user_phone'>
-                <button id="zd">оформить заказ  </button>
-            </form>
-        </div>
+        <form id="form">
+            <input type="text" placeholder="Ваше имя" id = 'user_name'>
+            <input type="text" placeholder="Ваш номер телефона" id = 'user_phone'>
+            <button id="order">оформить заказ  </button>
+        </form>
 
         <script src="https://telegram.org/js/telegram-web-app.js?59"></script>
         <script>
@@ -123,21 +121,13 @@
                 document.getElementById('form').style.display= "block";
 
             });
-
-
-            order.addEventListener("click", ()=> {
-                let name = document.getElementById('user_name').value;
-                let phone = document.getElementById('user_phone').value;
-
-                let data {name: name,
-                    phone: phone
-
-                }
-                tg.sendData(JSON.stringify(data))
-
+            order.addEventListener('click', ()=> {
                 tg.close();
+            }
 
-            });
+
+
+          
 
         </script>
 </body>
